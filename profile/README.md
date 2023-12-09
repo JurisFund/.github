@@ -27,6 +27,8 @@ Crypto investors deposit USDC into a lending pool in return for yields. The proc
 
 Based on statistics from similar funds backed by pre-settlement funding and our proposed revenue model, the projected APY for the pool is approximately 14–15%.
 
+![enter image description here](https://brown-agricultural-canidae-490.mypinata.cloud/ipfs/QmVLEoh62ZmM6ZrwK6STErGxawH5vF7F541LLeEqm2TSbA?_gl=1*8slzzz*_ga*MTc5NDM2MjgwMy4xNzAyMTMyNjU4*_ga_5RMPXG14TE*MTcwMjEzMjY3MS4xLjEuMTcwMjEzMzI3MC42MC4wLjA.)
+
 ### Platform admins:
 The admin portal is token-gated. Only wallets that own an "admin NFT" can unlock the admin portal. The admin dashboard shows all the information the borrowers provide in the loan applications, case ID, and embedded wallet addresses. The fund admins will perform due diligence off-chain to evaluate the merits of the legal cases and loan applications. Once an admin approves a loan, he or she will be prompted to enter the wallet address of the lawyer who represents the borrower (for use in escrow settlement), the loan amount, and the interest rate (APR).  In the meantime, a series of on-chain events will be executed:
 
@@ -44,6 +46,8 @@ Once a counterparty (e.g., the FTX bankruptcy trust account, the insurance compa
 - The accrued interest amount is calculated off-chain based on the principal loan amount, the APR, and the payback period. 3% of the sum of principal and interest will be taken out as platform fees. The remaining 97% will be sent back to the lending pool. 
 - The rest of the balance in the escrow will be sent to the borrower's wallet address.
 
+![enter image description here](https://brown-agricultural-canidae-490.mypinata.cloud/ipfs/QmUraFSp1V875qRhDoxqdhV49PQ24oGtVkEAKKTq6JEB3z?_gl=1*1rk79at*_ga*MTc5NDM2MjgwMy4xNzAyMTMyNjU4*_ga_5RMPXG14TE*MTcwMjEzMjY3MS4xLjEuMTcwMjEzNDUzMS42MC4wLjA.)
+
 ## How we built it
 
 We created a set of smart contracts for the dApps, including:
@@ -57,7 +61,9 @@ We built a MongoDB database to store information related to loan applications. T
 
 We implemented two core functionalities to automate the operation of the fund. 
 
-- A **cron job** runs periodically to monitor changes in the loan applications database. Whenever a case has an "Approved" status and a "null" loan issuance date, the cron job initiates the creation of an escrow account and the disbursement of the loan. 
+- A **cron job** runs periodically to monitor changes in the loan applications database. Whenever a case has an "Approved" status and a "null" loan issuance date, the cron job initiates the creation of an escrow account and the disbursement of the loan.
+
+![enter image description here](https://brown-agricultural-canidae-490.mypinata.cloud/ipfs/Qme25ehPRZ5fuBtz52GYAZMJjzoey6viLr3RrvGALxY2qv?_gl=1*164asua*_ga*MTc5NDM2MjgwMy4xNzAyMTMyNjU4*_ga_5RMPXG14TE*MTcwMjEzMjY3MS4xLjEuMTcwMjEzNDIwOC42MC4wLjA.)
 
 - We implemented **Chainlink Automation** (aka Keepers) to automate the re-distribution of settlements and the loan payback process. The Automation oracle runs on an hourly basis. Whenever there is a pending settlement in one of the escrow accounts, the escrow smart contract triggers re-distribution across multiple entities (lawyer, lending pool, platform fee, and borrower).
 
