@@ -18,6 +18,8 @@ The borrowers' app is a standalone PWA (progressive web app) that can be used bo
 
 Borrowers fill out an application on the app to provide basic information such as the type of case, expected settlement amount, and legal representation (mandatory). We provide a frictionless onboarding process for borrowers. A borrower signs up through email authentication and has an embedded wallet created for them immediately. 
 
+![UX of borrowers' app](https://brown-agricultural-canidae-490.mypinata.cloud/ipfs/QmXfSqTDM2oxY6dubNnY9TmPQUeoJuqnzbt51gwGHqHupf?_gl=1*1szb5i1*_ga*MTc5NDM2MjgwMy4xNzAyMTMyNjU4*_ga_5RMPXG14TE*MTcwMjEzMjY3MS4xLjEuMTcwMjEzMjcyOC4zLjAuMA..)
+
 In adherence to industry standards, JurisFund underwrites non-recourse loans backed by pre-settlement claims. The loan amount for each case is no more than 10-15% of the expected settlement amount.  The loans, once approved, carry a fixed APR, and the interest compounds monthly. The repayment of principal and accrued interest is due only if and when a settlement has been awarded to the borrower. 
 
 ### A lending pool for DeFi investors:
