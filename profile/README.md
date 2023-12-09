@@ -14,6 +14,8 @@ JurisFund bridges the gap between global capital and the 99% by facilitating acc
 JurisFund consists of three interconnected dApps, for the borrowers, DeFi investors, and platform admins, respectively. In addition, escrow accounts automate the re-distribution of settlement awards and the payback of loans. 
 
 ### Borrowers:
+The borrowers' app is a standalone PWA (progressive web app) that can be used both on desktop and mobile.
+
 Borrowers fill out an application on the app to provide basic information such as the type of case, expected settlement amount, and legal representation (mandatory). We provide a frictionless onboarding process for borrowers. A borrower signs up through email authentication and has an embedded wallet created for them immediately. 
 
 In adherence to industry standards, JurisFund underwrites non-recourse loans backed by pre-settlement claims. The loan amount for each case is no more than 10-15% of the expected settlement amount.  The loans, once approved, carry a fixed APR, and the interest compounds monthly. The repayment of principal and accrued interest is due only if and when a settlement has been awarded to the borrower. 
